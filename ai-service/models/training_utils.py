@@ -112,6 +112,10 @@ def train_classifiers(X: pd.DataFrame, y: pd.Series, preprocessor: ColumnTransfo
     joblib.dump(lr_pipeline, os.path.join(out_dir, f"{prefix}_logistic_regression.joblib"))
     results['logistic_regression'] = rlp
 
+    # include test split for downstream evaluation
+    results['_X_test'] = X_test
+    results['_y_test'] = y_test
+
     return results
 
 
@@ -131,6 +135,8 @@ def train_regressor(X: pd.DataFrame, y: pd.Series, preprocessor: ColumnTransform
 
 def print_classification_results(results: Dict):
     for name, info in results.items():
+        if str(name).startswith('_'):
+            continue
         print(f"=== {name} ===")
         metrics = info['metrics']
         print(f"Accuracy: {metrics.get('accuracy')}")

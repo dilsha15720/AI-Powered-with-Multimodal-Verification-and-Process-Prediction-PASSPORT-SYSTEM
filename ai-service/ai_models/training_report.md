@@ -16,6 +16,8 @@ Confusion Matrix:
 [[230, 0, 0], [0, 3, 0], [0, 0, 167]]
 ```
 
+Feature importance plot: none
+
 ### logistic_regression
 Accuracy: 1.0
 
@@ -23,6 +25,8 @@ Confusion Matrix:
 ```
 [[230, 0, 0], [0, 3, 0], [0, 0, 167]]
 ```
+
+Feature importance plot: none
 
 ## Hyperparameter Search
 Best params: {'clf__max_depth': None, 'clf__n_estimators': 50}
