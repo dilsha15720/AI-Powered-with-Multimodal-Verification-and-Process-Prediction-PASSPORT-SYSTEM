@@ -104,10 +104,10 @@ function Dashboard({onBack}){
             <p>Doc quality: <span className="pill">{selected.document_quality}</span></p>
             <div style={{display:'flex',gap:12,marginTop:8}}>
               <button className="btn" onClick={()=>verify(selected)}>Run Verification</button>
-              <button className="btn" onClick={async ()=>{
+                  <button className="btn" onClick={async ()=>{
                 try{
                   const token = sessionStorage.getItem('sp_admin_token')
-                  const headers = token ? { headers: { 'x-admin-token': token } } : {}
+                  const headers = token ? { headers: { 'Authorization': `Bearer ${token}` } } : {}
                   await axios.post(`${API_BASE}/api/apps/${selected.id}/process`, {status:'Processing'}, headers)
                   load()
                 }catch(e){
