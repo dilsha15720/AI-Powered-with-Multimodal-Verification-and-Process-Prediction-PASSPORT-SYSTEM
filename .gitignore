@@ -1,0 +1,25 @@
+# Node
+node_modules/
+package-lock.json
+npm-debug.log
+yarn.lock
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+
+# Logs
+logs/
+*.log
+/tmp/
+
+# Build
+frontend/build/
+
+# OS files
+*.swp
+*.swo

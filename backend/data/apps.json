@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "country": "USA",
+    "status": "Submitted",
+    "submitted_at": "2026-03-01",
+    "document_quality": "Good"
+  },
+  {
+    "id": 2,
+    "name": "Mohammad Ali",
+    "country": "Pakistan",
+    "status": "Under Review",
+    "submitted_at": "2026-03-05",
+    "document_quality": "Poor"
+  },
+  {
+    "id": 3,
+    "name": "Li Wei",
+    "country": "China",
+    "status": "Verified",
+    "submitted_at": "2026-02-25",
+    "document_quality": "Good"
+  }
+]
